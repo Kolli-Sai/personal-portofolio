@@ -10,7 +10,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <nav className=" flex justify-between items-center">
+    <nav className=" flex justify-between items-center sticky top-0">
       <div>
         <Link href="/">
           <TypographyH3 className=" text-primary flex justify-center items-center">
