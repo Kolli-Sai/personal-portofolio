@@ -10,7 +10,7 @@ const Layout = (props: Props) => {
   return (
     <section
       className={cn(
-        " container mx-auto max-w-7xl px-6 flex-grow",
+        " container mx-auto max-w-7xl px-6  flex-grow",
         props.className
       )}
     >

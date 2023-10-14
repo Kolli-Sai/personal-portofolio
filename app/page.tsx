@@ -23,13 +23,13 @@ const HomePage = () => {
       <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 w-full h-screen">
         <div className=" order-2 sm:order-1 flex flex-col justify-center items-start gap-10">
           <TypographyH1>
-            Hi! <br />
+            Hola ! <br />
             I'm <span className="text-primary">Kolli Sai</span>
           </TypographyH1>
           <TypographyLead className=" text-justify">
             I'm a full stack web developer, I Love working with React Ecosystem
-            especially Next.js.I'm Looking for a opportunity to work with a team
-            of developers to build amazing products.
+            especially Next.js. I'm Looking for a opportunity to work with a
+            team of developers to build amazing products.
           </TypographyLead>
           <div className=" flex gap-4">
             <Button asChild>
