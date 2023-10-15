@@ -112,8 +112,11 @@ const ProjectsPage = (props: Props) => {
     },
   ];
   return (
-    <>
-      <TypographyH3 className=" mb-6 text-primary underline underline-offset-4">Projects</TypographyH3>
+    <div className=" h-screen">
+      <TypographyH3
+        className="mb-8"
+        // className=" mb-6 text-primary underline underline-offset-4"
+      >Projects</TypographyH3>
       <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project) => (
           <Card key={project.id} className=" hover:border-primary">
@@ -178,7 +181,7 @@ const ProjectsPage = (props: Props) => {
           </Card>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

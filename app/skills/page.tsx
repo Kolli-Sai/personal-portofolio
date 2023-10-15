@@ -9,69 +9,232 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 type Props = {};
 
 const SkillsPage = (props: Props) => {
   const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "Prisma",
-    "NextAuth.js",
-    "TailwindCSS",
-    "Shadcn UI",
-    "Next UI",
-    "Daisy UI",
-    "@tanstck/react-query",
-    "@tanstack/react-table",
-    "React Hook Form",
-    "React-router",
-    "Redux-toolkit",
-    "Zustand",
+    {
+      id: 1,
+      label: "HTML",
+      image: "/html.svg",
+    },
+    {
+      id: 2,
+      label: "CSS",
+      image: "/css.svg",
+    },
+    {
+      id: 3,
+      label: "Javascript",
+      image: "/js.svg",
+    },
+    {
+      id: 4,
+      label: "Typescript",
+      image: "/ts.svg",
+    },
+    {
+      id: 5,
+      label: "React",
+      image: "/react.svg",
+    },
+    {
+      id: 6,
+      label: "Next.js",
+      image: "/nextjs.svg",
+    },
+    {
+      id: 7,
+      label: "TailwindCSS",
+      image: "/tailwindcss2.svg",
+    },
+    {
+      id: 8,
+      label: "Node.js",
+      image: "/nodejs.svg",
+    },
+    {
+      id: 9,
+      label: "Express.js",
+      image: "/expressjs.svg",
+    },
+    {
+      id: 10,
+      label: "MongoDB",
+      image: "/mongodb.svg",
+    },
+    ,
+    {
+      id: 12,
+      label: "Git",
+      image: "/git.svg",
+    },
+    {
+      id: 13,
+      label: "Github",
+      image: "/github.svg",
+    },
+    {
+      id: 14,
+      label: "Prisma",
+      image: "/prisma.svg",
+    },
+    {
+      id: 15,
+      label: "React Hook Form",
+      image: "reacthookform.svg",
+    },
+    {
+      id: 16,
+      label: "Next Ui",
+      image: "nextui.svg",
+    },
+    // {
+    //   id: 17,
+    //   label: "Shadcn UI",
+    //   image: "shadcn.svg",
+    // },
+    {
+      id: 18,
+      label: "zod",
+      image: "zod.svg",
+    },
+    {
+      id: 19,
+      label: "NextAuth",
+      image: "auth.svg",
+    },
+    {
+      id: 20,
+      label: "React Query",
+      image: "reactquery.svg",
+    },
+    {
+      id: 21,
+      label: "React Table",
+      image: "reacttable.svg",
+    },
+    {
+      id: 22,
+      label: "React Router",
+      image: "reactrouter.svg",
+    },
   ];
-  const techStack = [
-    'Next.js',
-    'NextAuth',
-    'TailwindCSS',
-    'Shadcn UI',
-    'React Hook Form',
-    'zod'
-  ]
+  const favorite = [
+    {
+      id: 1,
+      label: "Next.js",
+      image: "/nextjs.svg",
+    },
+
+    {
+      id: 3,
+      label: "TailwindCSS",
+      image: "/tailwindcss2.svg",
+    },
+    {
+      id: 4,
+      label: "Next UI",
+      image: "/nextui.svg",
+    },
+    {
+      id: 5,
+      label: "React Hook Form",
+      image: "reacthookform.svg",
+    },
+    {
+      id: 6,
+      label: "zod",
+      image: "zod.svg",
+    },
+    {
+      id: 7,
+      label: "React Query",
+      image: "reactquery.svg",
+    },
+    {
+      id: 8,
+      label: "Typescript",
+      image: "/ts.svg",
+    },
+    {
+      id: 9,
+      label: "Prisma",
+      image: "/prisma.svg",
+    },
+    {
+      id: 2,
+      label: "NextAuth",
+      image: "/auth.svg",
+    },
+  ];
+
   return (
-    <>
-      <TypographyH3 className=" text-primary underline underline-offset-4 ">
-        Skills
+    <div className=" h-screen py-6">
+      <TypographyH3
+        className="mb-8"
+        // className=" text-primary underline underline-offset-4 my-6 "
+      >
+        Tech Stack
       </TypographyH3>
-      <div className=" grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 my-6">
-        {skills.map((skill) => (
-          <Card key={skill} className=" hover:border-primary">
-            <CardHeader>
-              <CardTitle>{skill}</CardTitle>
-            </CardHeader>
-          </Card>
+      <div className=" flex flex-wrap gap-4 my-6">
+        {skills.map((skill: any) => (
+        
+            <TooltipProvider key={skill.id}>
+              <Tooltip>
+                <TooltipTrigger>
+                  <Image
+                    key={skill?.id}
+                    src={skill.image}
+                    width={48}
+                    height={48}
+                    alt={skill.label}
+                  />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{skill.label}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+       
         ))}
       </div>
-      <TypographyH3 className=" text-primary underline underline-offset-4 mb-6">My Favorite tech Stack</TypographyH3>
+      <TypographyH3
+        className="mb-8"
+        // className=" text-primary underline underline-offset-4 my-6"
+      >
+        My Favorite Tech Stack
+      </TypographyH3>
 
-      <div>
-        <div className=" grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 my-6">
-          {techStack.map((skill) => (
-            <Card key={skill} className=" hover:border-primary">
-              <CardHeader>
-                <CardTitle>{skill}</CardTitle>
-              </CardHeader>
-            </Card>
-          ))}
-        </div>
+      <div className=" flex flex-wrap gap-4">
+        {favorite.map((skill: any) => (
+          <TooltipProvider key={skill.id}>
+            <Tooltip>
+              <TooltipTrigger>
+                <Image
+                  key={skill?.id}
+                  src={skill.image}
+                  width={48}
+                  height={48}
+                  alt={skill.label}
+                />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{skill.label}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

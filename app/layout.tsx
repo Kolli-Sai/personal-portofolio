@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import Providers from "./providers";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster";
 type Props = {
   children: React.ReactNode;
 };
@@ -27,10 +28,11 @@ const RootLayout = (props: Props) => {
           <Layout className=" py-6">
             <Navbar />
           </Layout>
-          <Separator />
+          <Separator className=" text-primary bg-primary"/>
           <Layout className=" py-6">
             <main>{props.children}</main>
           </Layout>
+          <Toaster />
         </Providers>
       </body>
     </html>
