@@ -172,7 +172,9 @@ const SkillsPage = (props: Props) => {
 
   return (
     <div className=" h-screen py-6">
-      <TypographyH3 className="mb-8">Tech Stack</TypographyH3>
+      <TypographyH3 className="mb-8 text-center text-primary underline underline-offset-4 decoration-4">
+        Tech Stack
+      </TypographyH3>
       <div className=" flex flex-wrap gap-4 my-6">
         {skills.map((skill: any) => (
           <TooltipProvider key={skill.id}>
@@ -184,6 +186,7 @@ const SkillsPage = (props: Props) => {
                   width={48}
                   height={48}
                   alt={skill.label}
+                  className=" text-foreground bg-secondary"
                 />
               </TooltipTrigger>
               <TooltipContent>
@@ -193,7 +196,9 @@ const SkillsPage = (props: Props) => {
           </TooltipProvider>
         ))}
       </div>
-      <TypographyH3 className="mb-8">My Favorite Tech Stack</TypographyH3>
+      <TypographyH3 className="mb-8 text-center text-primary underline underline-offset-4 decoration-4">
+        My Favorite Tech Stack
+      </TypographyH3>
 
       <div className=" flex flex-wrap gap-4">
         {favorite.map((skill: any) => (
