@@ -15,7 +15,7 @@ const Navbar = (props: Props) => {
         <Link href="/">
           <TypographyH3 className=" text-primary flex justify-center items-center">
             <User className=" w-10 h-10 mr-2" />
-            Portofolio
+            Kolli Sai
           </TypographyH3>
         </Link>
       </div>

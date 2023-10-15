@@ -1,8 +1,6 @@
 import ContactForm from "@/components/forms/contact-form";
-import { Separator } from "@/components/ui/separator";
 import {
   TypographyH3,
-  TypographyLarge,
   TypographyLead,
   TypographyP,
 } from "@/components/ui/typography";
@@ -52,12 +50,7 @@ const ContactPage = (props: Props) => {
   return (
     <>
       <div className=" min-h-screen w-full">
-        <TypographyH3
-          // className=" text-primary underline underline-offset-4"
-          className=" mb-8"
-        >
-          Contact Me
-        </TypographyH3>
+        <TypographyH3 className=" mb-8">Contact Me</TypographyH3>
         <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 py-12">
           <div className=" flex flex-col justify-center items-start">
             <Image
@@ -72,7 +65,6 @@ const ContactPage = (props: Props) => {
           </div>
         </div>
 
-        {/* <Separator className=" my-8" /> */}
         <TypographyLead className="text-center my-6">
           Reach Me Out
         </TypographyLead>
@@ -84,19 +76,13 @@ const ContactPage = (props: Props) => {
                   <div className=" flex justify-center items-center hover:text-primary">
                     <Link href={item.href}>{item.icon}</Link>
                   </div>
-                  {/* <TypographyLarge className=" text-center">
-                    {item.title}
-                  </TypographyLarge> */}
                 </div>
               </HoverCardTrigger>
               <HoverCardContent className=" flex flex-col justify-center items-center gap-2">
                 <TypographyP className=" text-center">
                   {item.label}
-                  <Link
-                    href={item.href}
-                    className=" text-primary underline"
-                  >
-                   {item.title}
+                  <Link href={item.href} className=" text-primary underline">
+                    {item.title}
                   </Link>
                 </TypographyP>
               </HoverCardContent>

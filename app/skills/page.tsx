@@ -1,14 +1,7 @@
 import { TypographyH3 } from "@/components/ui/typography";
 
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 import Image from "next/image";
 import {
   Tooltip,
@@ -179,40 +172,28 @@ const SkillsPage = (props: Props) => {
 
   return (
     <div className=" h-screen py-6">
-      <TypographyH3
-        className="mb-8"
-        // className=" text-primary underline underline-offset-4 my-6 "
-      >
-        Tech Stack
-      </TypographyH3>
+      <TypographyH3 className="mb-8">Tech Stack</TypographyH3>
       <div className=" flex flex-wrap gap-4 my-6">
         {skills.map((skill: any) => (
-        
-            <TooltipProvider key={skill.id}>
-              <Tooltip>
-                <TooltipTrigger>
-                  <Image
-                    key={skill?.id}
-                    src={skill.image}
-                    width={48}
-                    height={48}
-                    alt={skill.label}
-                  />
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{skill.label}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-       
+          <TooltipProvider key={skill.id}>
+            <Tooltip>
+              <TooltipTrigger>
+                <Image
+                  key={skill?.id}
+                  src={skill.image}
+                  width={48}
+                  height={48}
+                  alt={skill.label}
+                />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{skill.label}</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         ))}
       </div>
-      <TypographyH3
-        className="mb-8"
-        // className=" text-primary underline underline-offset-4 my-6"
-      >
-        My Favorite Tech Stack
-      </TypographyH3>
+      <TypographyH3 className="mb-8">My Favorite Tech Stack</TypographyH3>
 
       <div className=" flex flex-wrap gap-4">
         {favorite.map((skill: any) => (

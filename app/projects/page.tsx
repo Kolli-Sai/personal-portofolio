@@ -1,8 +1,6 @@
 import {
   TypographyH3,
-  TypographyInlineCode,
-  TypographyLead,
-  TypographyList,
+
   TypographySmall,
 } from "@/components/ui/typography";
 import React from "react";
@@ -23,7 +21,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Separator } from "@/components/ui/separator";
 
 type Props = {};
 
@@ -115,7 +112,6 @@ const ProjectsPage = (props: Props) => {
     <div className=" h-screen">
       <TypographyH3
         className="mb-8"
-        // className=" mb-6 text-primary underline underline-offset-4"
       >Projects</TypographyH3>
       <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project) => (

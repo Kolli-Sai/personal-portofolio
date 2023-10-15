@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Button } from "@/components/ui/button";
 import {
   TypographyH1,
@@ -6,7 +5,6 @@ import {
   TypographyMuted,
 } from "@/components/ui/typography";
 import {
-  ExternalLink,
   FileText,
   MoveRightIcon,
   Twitter,
@@ -16,7 +14,6 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
 import {
   HoverCard,
   HoverCardContent,
@@ -60,12 +57,12 @@ const HomePage = () => {
         <div className=" order-2 sm:order-1 flex flex-col justify-center items-start gap-10">
           <TypographyH1>
             Hola ! <br />
-            I'm <span className="text-primary">Kolli Sai</span>
+            I&apos;m <span className="text-primary">Kolli Sai</span>
           </TypographyH1>
           <TypographyLead className=" text-justify">
-            I'm a full stack web developer, I Love working with React Ecosystem
-            especially Next.js. I'm Looking for a opportunity to work with a
-            team of developers to build amazing products.
+            I&apos;m a full stack web developer, I Love working with React
+            Ecosystem especially Next.js. I&apos;m Looking for a opportunity to
+            work with a team of developers to build amazing products.
           </TypographyLead>
           <div className=" flex gap-4">
             <Button asChild>
@@ -79,26 +76,27 @@ const HomePage = () => {
             </Button>
           </div>
           <div className=" flex gap-6">
-            {
-              // @ts-ignore
-              links.map((link) => (
-                <HoverCard key={link.id}>
-                  <HoverCardTrigger>
-                    <div className=" flex gap-2 items-center">
-                      <Link href={link.href} className=" hover:text-primary">{link.icon}</Link>
-                    </div>
-                  </HoverCardTrigger>
-                  <HoverCardContent>
-                    <TypographyMuted>
-                      {link.label}
-                      <Link href={link.href}>
-                        <span className=" text-primary underline">{link.title}</span>
-                      </Link>
-                    </TypographyMuted>
-                  </HoverCardContent>
-                </HoverCard>
-              ))
-            }
+            {links.map((link) => (
+              <HoverCard key={link.id}>
+                <HoverCardTrigger>
+                  <div className=" flex gap-2 items-center">
+                    <Link href={link.href} className=" hover:text-primary">
+                      {link.icon}
+                    </Link>
+                  </div>
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <TypographyMuted>
+                    {link.label}
+                    <Link href={link.href}>
+                      <span className=" text-primary underline">
+                        {link.title}
+                      </span>
+                    </Link>
+                  </TypographyMuted>
+                </HoverCardContent>
+              </HoverCard>
+            ))}
           </div>
         </div>
         <div className=" order-1 sm:order-2 flex flex-col justify-center items-end">
