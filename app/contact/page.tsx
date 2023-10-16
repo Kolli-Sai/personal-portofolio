@@ -49,9 +49,9 @@ const ContactPage = (props: Props) => {
   ];
   return (
     <>
-      <div className=" min-h-screen w-full">
-        <TypographyH3 className=" mb-8 text-center text-primary underline underline-offset-4 decoration-4">Contact Me</TypographyH3>
-        <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 py-12">
+      <div className=" min-h-screen w-full ">
+       
+        <div className=" grid grid-cols-1 gap-12 sm:grid-cols-2  py-12">
           <div className=" flex flex-col justify-center items-start">
             <Image
               src={"/contact4.svg"}

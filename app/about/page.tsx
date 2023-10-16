@@ -15,14 +15,11 @@ type Props = {};
 const AboutPage = (props: Props) => {
   return (
     <div className=" h-screen w-full">
-      <TypographyH3 className=" mb-8 text-center text-primary underline underline-offset-4 decoration-4">
-        About Me
-      </TypographyH3>
-      <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 py-12">
+      <div className=" grid grid-cols-1 gap-8 sm:grid-cols-2  py-12">
         <div className=" flex flex-col justify-center">
           <Image src={"/about2.svg"} width={500} height={500} alt="about me" />
         </div>
-        <div className="flex flex-col gap-4 justify-center items-start h-full">
+        <div className="flex flex-col gap-3 justify-center items-start h-full mt-4">
           <TypographyH3 className="text-primary">Kolli Sai</TypographyH3>
           <TypographyP className="text-justify">
             I&apos;m Sai, a passionate individual with a B-Tech degree in Civil
