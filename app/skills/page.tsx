@@ -31,7 +31,23 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Skills",
-}
+  openGraph: {
+    title: "Skills",
+    description: "This Page inCludes the data Skills",
+    url: "/skills",
+    siteName: "Portfolio",
+
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Skills",
+    description: "This Page inCludes the data Skills",
+
+    creator: "@saik98187",
+  },
+};
 
 const SkillsPage = () => {
   const frontend = [

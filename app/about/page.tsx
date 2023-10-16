@@ -12,8 +12,24 @@ import Link from "next/link";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: 'About Me'
-}
+  title: "About Me",
+  openGraph: {
+    title: "About Me",
+    description: "This Page inCludes the data about me",
+    url: "/about",
+    siteName: "Portfolio",
+
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Me",
+    description: "This Page inCludes the data about me",
+   
+    creator: "@saik98187",
+  },
+};
 
 type Props = {};
 
