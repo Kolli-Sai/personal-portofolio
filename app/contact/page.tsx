@@ -13,6 +13,11 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Contact Me'
+}
 
 type Props = {};
 

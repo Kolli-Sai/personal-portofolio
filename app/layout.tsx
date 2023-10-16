@@ -7,6 +7,17 @@ import Providers from "./providers";
 import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Kolli Sai",
+    template: "%s | Kolli Sai",
+  },
+  description:
+    "This is My personal website where you can find my resume and my projects",
+};
+
 type Props = {
   children: React.ReactNode;
 };
@@ -28,7 +39,7 @@ const RootLayout = (props: Props) => {
           <Layout className=" py-6">
             <Navbar />
           </Layout>
-          <Separator className=" text-primary bg-primary"/>
+          <Separator className=" text-primary bg-primary" />
           <Layout className=" py-6">
             <main>{props.children}</main>
           </Layout>

@@ -39,7 +39,12 @@ import { SiPrisma } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiDaisyui } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
+import { Metadata } from "next";
 type Props = {};
+
+export const metadata: Metadata = {
+  title: "Projects",
+}
 
 const ProjectsPage = (props: Props) => {
   const projects = [

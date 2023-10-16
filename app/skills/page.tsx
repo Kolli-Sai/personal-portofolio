@@ -19,7 +19,6 @@ import { SiGithub } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiDaisyui } from "react-icons/si";
-
 import {
   Tooltip,
   TooltipContent,
@@ -27,10 +26,14 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { TypographyH3 } from "@/components/ui/typography";
+import { Metadata } from "next";
 
-type Props = {};
 
-const SkillsPage = (props: Props) => {
+export const metadata: Metadata = {
+  title: "Skills",
+}
+
+const SkillsPage = () => {
   const frontend = [
     {
       id: 1,

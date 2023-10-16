@@ -6,9 +6,14 @@ import {
   TypographyP,
 } from "@/components/ui/typography";
 import { ExternalLink } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: 'About Me'
+}
 
 type Props = {};
 

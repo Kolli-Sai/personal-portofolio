@@ -9,3 +9,13 @@ export const getResendApiKey = () => {
   }
   return apiKey;
 };
+
+export const getBaseUrl = () => {
+  const baseUrl = process.env.BASE_URL;
+  if (!baseUrl) {
+    throw new Error(
+      "BASE_URL is not defined. Please define it in your .env.local file."
+    );
+  }
+  return baseUrl;
+}
