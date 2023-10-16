@@ -130,7 +130,7 @@ const ContactForm = (props: Props) => {
           type="submit"
           disabled={!form.formState.isDirty || !form.formState.isValid}
         >
-          {isLoading && <RotateCw className=" animate-spin w-6 h-6 mr-2" />}
+          {isLoading && <RotateCw className=" animate-spin w-4 h-4 mr-2" />}
           Send
           <MoveRight className=" ml-2 w-6 h-6" />
         </Button>

@@ -1,219 +1,291 @@
-import { TypographyH3 } from "@/components/ui/typography";
-
 import React from "react";
+import { SiHtml5 } from "react-icons/si";
+import { SiCss3 } from "react-icons/si";
+import { SiJavascript } from "react-icons/si";
+import { SiReact } from "react-icons/si";
+import { SiReacthookform } from "react-icons/si";
+import { SiReactquery } from "react-icons/si";
+import { SiReacttable } from "react-icons/si";
+import { SiReactrouter } from "react-icons/si";
+import { SiZod } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { SiRedux } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { SiGit } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+import { SiPrisma } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiDaisyui } from "react-icons/si";
 
-import Image from "next/image";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { TypographyH3 } from "@/components/ui/typography";
 
 type Props = {};
 
 const SkillsPage = (props: Props) => {
-  const skills = [
+  const frontend = [
     {
       id: 1,
-      label: "HTML",
-      image: "/html.svg",
+      label: "HTML5",
+      image: SiHtml5,
     },
     {
       id: 2,
-      label: "CSS",
-      image: "/css.svg",
+      label: "CSS3",
+      image: SiCss3,
     },
     {
       id: 3,
       label: "Javascript",
-      image: "/js.svg",
+      image: SiJavascript,
     },
     {
       id: 4,
       label: "Typescript",
-      image: "/ts.svg",
+      image: SiTypescript,
     },
     {
       id: 5,
       label: "React",
-      image: "/react.svg",
+      image: SiReact,
     },
     {
       id: 6,
-      label: "Next.js",
-      image: "/nextjs.svg",
+      label: "Redux",
+      image: SiRedux,
     },
     {
       id: 7,
       label: "TailwindCSS",
-      image: "/tailwindcss2.svg",
+      image: SiTailwindcss,
     },
     {
       id: 8,
-      label: "Node.js",
-      image: "/nodejs.svg",
-    },
-    {
-      id: 9,
-      label: "Express.js",
-      image: "/expressjs.svg",
-    },
-    {
-      id: 10,
-      label: "MongoDB",
-      image: "/mongodb.svg",
-    },
-    ,
-    {
-      id: 12,
-      label: "Git",
-      image: "/git.svg",
-    },
-    {
-      id: 13,
-      label: "Github",
-      image: "/github.svg",
-    },
-    {
-      id: 14,
-      label: "Prisma",
-      image: "/prisma.svg",
-    },
-    {
-      id: 15,
-      label: "React Hook Form",
-      image: "reacthookform.svg",
-    },
-    {
-      id: 16,
-      label: "Next Ui",
-      image: "nextui.svg",
-    },
-    // {
-    //   id: 17,
-    //   label: "Shadcn UI",
-    //   image: "shadcn.svg",
-    // },
-    {
-      id: 18,
-      label: "zod",
-      image: "zod.svg",
-    },
-    {
-      id: 19,
-      label: "NextAuth",
-      image: "auth.svg",
-    },
-    {
-      id: 20,
-      label: "React Query",
-      image: "reactquery.svg",
-    },
-    {
-      id: 21,
-      label: "React Table",
-      image: "reacttable.svg",
-    },
-    {
-      id: 22,
-      label: "React Router",
-      image: "reactrouter.svg",
+      label: "DaisyUI",
+      image: SiDaisyui,
     },
   ];
-  const favorite = [
+
+  const backend = [
     {
       id: 1,
-      label: "Next.js",
-      image: "/nextjs.svg",
-    },
-
-    {
-      id: 3,
-      label: "TailwindCSS",
-      image: "/tailwindcss2.svg",
-    },
-    {
-      id: 4,
-      label: "Next UI",
-      image: "/nextui.svg",
-    },
-    {
-      id: 5,
-      label: "React Hook Form",
-      image: "reacthookform.svg",
-    },
-    {
-      id: 6,
-      label: "zod",
-      image: "zod.svg",
-    },
-    {
-      id: 7,
-      label: "React Query",
-      image: "reactquery.svg",
-    },
-    {
-      id: 8,
-      label: "Typescript",
-      image: "/ts.svg",
-    },
-    {
-      id: 9,
-      label: "Prisma",
-      image: "/prisma.svg",
+      label: "NodeJS",
+      image: FaNodeJs,
     },
     {
       id: 2,
-      label: "NextAuth",
-      image: "/auth.svg",
+      label: "ExpressJS",
+      image: SiExpress,
+    },
+    {
+      id: 3,
+      label: "MongoDB",
+      image: SiMongodb,
+    },
+    {
+      id: 4,
+      label: "Prisma",
+      image: SiPrisma,
+    },
+  ];
+
+  const frameworks = [
+    {
+      id: 1,
+      label: "NextJS",
+      image: TbBrandNextjs,
+    },
+  ];
+
+  const otherTechnologies = [
+    {
+      id: 1,
+      label: "React Hook Form",
+      image: SiReacthookform,
+    },
+    {
+      id: 2,
+      label: "React Query",
+      image: SiReactquery,
+    },
+    {
+      id: 3,
+      label: "React Table",
+      image: SiReacttable,
+    },
+    {
+      id: 4,
+      label: "React Router",
+      image: SiReactrouter,
+    },
+    {
+      id: 5,
+      label: "Zod",
+      image: SiZod,
+    },
+    {
+      id: 6,
+      label: "Git",
+      image: SiGit,
+    },
+    {
+      id: 7,
+      label: "Github",
+      image: SiGithub,
+    },
+  ];
+
+  const favoriteTechnologies = [
+    {
+      id: 1,
+      label: "NextJS",
+      image: TbBrandNextjs,
+    },
+    {
+      id: 2,
+      label: "TailwindCSS",
+      image: SiTailwindcss,
+    },
+    {
+      id: 3,
+      label: "DaisyUI",
+      image: SiDaisyui,
+    },
+    {
+      id: 4,
+      label: "React Hook Form",
+      image: SiReacthookform,
+    },
+    {
+      id: 5,
+      label: "React Query",
+      image: SiReactquery,
+    },
+    {
+      id: 6,
+      label: "Zod",
+      image: SiZod,
+    },
+    {
+      id: 7,
+      label: "Prisma",
+      image: SiPrisma,
+    },
+    {
+      id: 8,
+      label: "MongoDB",
+      image: SiMongodb,
     },
   ];
 
   return (
-    <div className=" h-screen py-6">
-      <TypographyH3 className="mb-8">Tech Stack</TypographyH3>
-      <div className=" flex flex-wrap gap-4 my-6">
-        {skills.map((skill: any) => (
-          <TooltipProvider key={skill.id}>
-            <Tooltip>
-              <TooltipTrigger>
-                <Image
-                  key={skill?.id}
-                  src={skill.image}
-                  width={48}
-                  height={48}
-                  alt={skill.label}
-                />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{skill.label}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        ))}
+    <div className=" flex flex-col gap-8">
+      <div>
+        <TypographyH3 className=" text-primary text-center">Frontend</TypographyH3>
+        <div className=" flex flex-wrap gap-3 items-center justify-center my-4">
+          {frontend.map((item) => (
+            <>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <item.image className="text-4xl hover:text-primary" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{item.label}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </>
+          ))}
+        </div>
       </div>
-      <TypographyH3 className="mb-8">My Favorite Tech Stack</TypographyH3>
-
-      <div className=" flex flex-wrap gap-4">
-        {favorite.map((skill: any) => (
-          <TooltipProvider key={skill.id}>
-            <Tooltip>
-              <TooltipTrigger>
-                <Image
-                  key={skill?.id}
-                  src={skill.image}
-                  width={48}
-                  height={48}
-                  alt={skill.label}
-                />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{skill.label}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        ))}
+      <div>
+        <TypographyH3 className=" text-primary text-center">Backend</TypographyH3>
+        <div className=" flex flex-wrap  gap-3 items-center justify-center  my-4">
+          {backend.map((item) => (
+            <>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <item.image className="text-4xl hover:text-primary" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{item.label}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </>
+          ))}
+        </div>
+      </div>
+      <div>
+        <TypographyH3 className=" text-primary text-center">Frameworks</TypographyH3>
+        <div className=" flex flex-wrap  gap-3 items-center justify-center my-4">
+          {frameworks.map((item) => (
+            <>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <item.image className="text-4xl hover:text-primary" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{item.label}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </>
+          ))}
+        </div>
+      </div>
+      <div>
+        <TypographyH3 className=" text-primary text-center">
+          Other Technologies
+        </TypographyH3>
+        <div className=" flex flex-wrap  gap-3 items-center justify-center my-4">
+          {otherTechnologies.map((item) => (
+            <>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <item.image className="text-4xl hover:text-primary" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{item.label}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </>
+          ))}
+        </div>
+      </div>
+      <div>
+        <TypographyH3 className=" text-primary text-center">
+          Favorite Technologies
+        </TypographyH3>
+        <div className=" flex  flex-wrap gap-3 items-center justify-center my-4">
+          {favoriteTechnologies.map((item) => (
+            <>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <item.image className="text-4xl hover:text-primary" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{item.label}</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </>
+          ))}
+        </div>
       </div>
     </div>
   );

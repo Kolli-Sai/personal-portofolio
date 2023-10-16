@@ -51,6 +51,7 @@ const HomePage = () => {
       href: "/",
     },
   ];
+
   return (
     <>
       <div className=" grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 w-full h-screen">
