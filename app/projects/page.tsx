@@ -44,7 +44,23 @@ type Props = {};
 
 export const metadata: Metadata = {
   title: "Projects",
-}
+  openGraph: {
+    title: "Projects",
+    description: "This Page inCludes the data Projects",
+    url: "/projects",
+    siteName: "Portfolio",
+
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projects",
+    description: "This Page inCludes the data Projects",
+
+    creator: "@saik98187",
+  },
+};
 
 const ProjectsPage = (props: Props) => {
   const projects = [

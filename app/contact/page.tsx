@@ -16,8 +16,24 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Contact Me'
-}
+  title: "Contact Me",
+  openGraph: {
+    title: "Contact Me",
+    description: "This Page inCludes the data Contact Me",
+    url: "/contact",
+    siteName: "Portfolio",
+
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Me",
+    description: "This Page inCludes the data Contact Me",
+
+    creator: "@saik98187",
+  },
+};
 
 type Props = {};
 
@@ -55,7 +71,6 @@ const ContactPage = (props: Props) => {
   return (
     <>
       <div className=" min-h-screen w-full ">
-       
         <div className=" grid grid-cols-1 gap-12 sm:grid-cols-2  py-12">
           <div className=" flex flex-col justify-center items-start">
             <Image

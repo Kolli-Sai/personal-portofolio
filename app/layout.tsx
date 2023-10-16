@@ -8,6 +8,7 @@ import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import { Metadata } from "next";
+import { getBaseUrl } from "@/lib/secrets";
 
 export const metadata: Metadata = {
   title: {
@@ -16,6 +17,70 @@ export const metadata: Metadata = {
   },
   description:
     "This is My personal website where you can find my resume and my projects",
+  creator: "Kolli Sai",
+  publisher: "Kolli Sai",
+  generator: "Next js",
+  authors: [{ name: "Kolli Sai", url: "https://kolli-sai.vercel.app" }],
+  applicationName: "Kolli Sai",
+  keywords: [
+    "Kolli Sai",
+    "Kolli Sai portfolio",
+    "Kolli Sai resume",
+    "Kolli Sai projects",
+    "Kolli Sai website",
+  ],
+  referrer: "no-referrer",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  colorScheme: "dark light",
+  themeColor: "#16a34a",
+  metadataBase: new URL(getBaseUrl()),
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  manifest: "/manifest.json",
+  verification: {
+    google: "google",
+    yandex: "yandex",
+    yahoo: "yahoo",
+    other: {
+      me: ["saik98187@gmail.com", "https://kolli-sai.vercel.app"],
+    },
+  },
+  bookmarks: ["/", "/about", "/projects", "/skills", "/contact"],
+  category: "technology",
+  openGraph: {
+    title: "Kolli Sai",
+    description:
+      "This is My personal website where you can find my resume and my projects",
+    url: "/",
+    siteName: "Portfolio",
+
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kolli Sai",
+    description:
+      "This is My personal website where you can find my resume and my projects",
+    // siteId: "1467726470533754880",
+    // creatorId: "1467726470533754880",
+    creator: "@saik98187",
+  },
 };
 
 type Props = {
