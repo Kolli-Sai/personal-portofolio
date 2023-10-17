@@ -39,6 +39,7 @@ import { SiPrisma } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiDaisyui } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
+import {CgEricsson} from "react-icons/cg";
 import { Metadata } from "next";
 type Props = {};
 
@@ -103,9 +104,14 @@ const ProjectsPage = (props: Props) => {
           label: "MongoDB",
           image: SiMongodb,
         },
+        {
+          id: 8,
+          label: 'Shadcn UI',
+          image: CgEricsson
+        }
       ],
-      live: "",
-      source: "",
+      live: "https://expense-tracker-ecru-two.vercel.app/",
+      source: "https://github.com/Kolli-Sai/expense-tracker",
     },
     {
       id: 2,
@@ -147,8 +153,8 @@ const ProjectsPage = (props: Props) => {
           image: SiMongodb,
         },
       ],
-      live: "",
-      source: "",
+      live: "https://todo-five-lemon.vercel.app/",
+      source: "https://github.com/Kolli-Sai/todo",
     },
     {
       id: 3,
@@ -190,8 +196,8 @@ const ProjectsPage = (props: Props) => {
           image: SiMongodb,
         },
       ],
-      live: "",
-      source: "",
+      live: "https://url-shortner-drab-delta.vercel.app/",
+      source: "https://github.com/Kolli-Sai/url-shortner",
     },
     {
       id: 4,
@@ -238,8 +244,8 @@ const ProjectsPage = (props: Props) => {
           image: SiReactrouter,
         },
       ],
-      live: "",
-      source: "",
+      live: "https://fluffy-halva-49f833.netlify.app/",
+      source: "https://github.com/hash-insert/Employee-Management-App-ALPHA",
     },
     {
       id: 5,
@@ -282,8 +288,8 @@ const ProjectsPage = (props: Props) => {
           image: SiReactrouter,
         },
       ],
-      live: "",
-      source: "",
+      live: "https://passwords-jekz3evge-kolli-sai.vercel.app/",
+      source: "https://github.com/Kolli-Sai/passwords",
     },
   ];
 
@@ -323,7 +329,7 @@ const ProjectsPage = (props: Props) => {
                         variant={"secondary"}
                         className=" rounded-full cursor-pointer"
                       >
-                        <Link href={project.live}>
+                        <Link href={project.live} target="_blank">
                           <ExternalLink />
                         </Link>
                       </Button>
@@ -343,7 +349,7 @@ const ProjectsPage = (props: Props) => {
                         variant={"secondary"}
                         className=" rounded-full cursor-pointer"
                       >
-                        <Link href={project.source}>
+                        <Link href={project.source} target="_blank">
                           <Github />
                         </Link>
                       </Button>

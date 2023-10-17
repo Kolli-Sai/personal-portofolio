@@ -35,21 +35,21 @@ const HomePage = () => {
       label: "Find me on ",
       title: "Linkedin",
       icon: <Linkedin />,
-      href: "/",
+      href: "https://www.linkedin.com/in/kolli-sai-676772233",
     },
     {
       id: 3,
       label: "Find me on ",
       title: "Github",
       icon: <Github />,
-      href: "/",
+      href: "https://github.com/Kolli-Sai",
     },
     {
       id: 4,
       label: "Find me on ",
       title: "Twitter",
       icon: <Twitter />,
-      href: "/",
+      href: "https://twitter.com/saik98187?t=mZ9QW3kA9h683zcsNd5pNA&s=09",
     },
   ];
 
@@ -90,7 +90,7 @@ const HomePage = () => {
                 <HoverCardContent>
                   <TypographyMuted>
                     {link.label}
-                    <Link href={link.href}>
+                    <Link href={link.href} target="_blank">
                       <span className=" text-primary underline">
                         {link.title}
                       </span>
