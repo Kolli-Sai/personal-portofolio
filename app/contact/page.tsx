@@ -44,28 +44,28 @@ const ContactPage = (props: Props) => {
       title: "Facebook",
       label: "Find me on ",
       icon: <Facebook size={24} />,
-      href: "/",
+      href: "https://www.facebook.com/k.sai.140193?mibextid=ZbWKwL",
     },
     {
       id: 2,
       title: "Linkedin",
       label: "Find me on ",
       icon: <Linkedin size={24} />,
-      href: "/",
+      href: "https://www.linkedin.com/in/kolli-sai-676772233",
     },
     {
       id: 3,
       title: "Twitter",
       label: "Find me on ",
       icon: <Twitter size={24} />,
-      href: "/",
+      href: "https://twitter.com/saik98187?t=mZ9QW3kA9h683zcsNd5pNA&s=09",
     },
     {
       id: 4,
       title: "Github",
       label: "See my projects on ",
       icon: <Github size={24} />,
-      href: "/",
+      href: "https://github.com/Kolli-Sai",
     },
   ];
   return (
@@ -94,14 +94,14 @@ const ContactPage = (props: Props) => {
               <HoverCardTrigger>
                 <div className=" flex flex-col justify-center items-center gap-2">
                   <div className=" flex justify-center items-center hover:text-primary">
-                    <Link href={item.href}>{item.icon}</Link>
+                    <Link href={item.href} target="_blank">{item.icon}</Link>
                   </div>
                 </div>
               </HoverCardTrigger>
               <HoverCardContent className=" flex flex-col justify-center items-center gap-2">
                 <TypographyP className=" text-center">
                   {item.label}
-                  <Link href={item.href} className=" text-primary underline">
+                  <Link href={item.href} target="_blank"  className=" text-primary underline">
                     {item.title}
                   </Link>
                 </TypographyP>
