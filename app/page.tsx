@@ -28,7 +28,7 @@ const HomePage = () => {
       label: "View My ",
       title: "Resume",
       icon: <FileText />,
-      href: "/",
+      href: "https://drive.google.com/file/d/1T-CtHlkIGPMZd3MB9YYvLYB1Sg7m2Fe9/view?usp=sharing",
     },
     {
       id: 2,
