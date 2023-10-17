@@ -6,12 +6,13 @@ import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuGroup,
 } from "@/components/ui/dropdown-menu";
+
 import { HiMenuAlt4 } from "react-icons/hi";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -29,32 +30,21 @@ export function NavbarMenu() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-          <DropdownMenuRadioItem
-            value="/about"
-            onClick={() => router.push("/about")}
-          >
-            About
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem
-            value="/skills"
-            onClick={() => router.push("/skills")}
-          >
-            Skills
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem
-            value="/projects"
-            onClick={() => router.push("/projects")}
-          >
-            Projects
-          </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem
-            value="/contact"
-            onClick={() => router.push("/contact")}
-          >
-            Contact
-          </DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
+      
+        <DropdownMenuItem onClick={()=>router.push('/about')}>
+          About
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={()=>router.push('/projects')}>
+          Projects
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={()=>router.push('/skills')}>
+          Skills
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={()=>router.push('/contact')}>
+          Contact
+        </DropdownMenuItem>
+
+       
       </DropdownMenuContent>
     </DropdownMenu>
   );
